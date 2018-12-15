@@ -23,5 +23,6 @@ hostnamectl --static set-hostname  $1
 sed -i '$a\127.0.0.1 '$1 /etc/hosts
 modprobe br_netfilter
 sysctl net.bridge.bridge-nf-call-iptables=1
+sh download_images.sh
 echo 'all done'
 
